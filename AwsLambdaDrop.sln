@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwsLambdaDrop", "AwsLambdaDrop\AwsLambdaDrop.csproj", "{6A4456E2-139A-4507-8653-770005771D12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A4456E2-139A-4507-8653-770005771D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A4456E2-139A-4507-8653-770005771D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A4456E2-139A-4507-8653-770005771D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A4456E2-139A-4507-8653-770005771D12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4920F6E9-9F4C-4EE5-A871-59464A4FAF59}
+	EndGlobalSection
+EndGlobal
