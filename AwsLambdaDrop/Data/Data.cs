@@ -9,6 +9,8 @@ namespace AwsLambdaDrop.Data
 {
     public partial class AwsLinkingRequestObject
     {
+        [JsonProperty("MasterAccountEmail")]
+        public string MasterAccountEmail { get; set; }
         [JsonProperty("CallerIdentity")]
         public CallerIdentity CallerIdentity { get; set; }
 

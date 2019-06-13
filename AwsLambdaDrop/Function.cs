@@ -33,12 +33,15 @@ namespace AwsLambdaDrop
             {
                 var s3Client = new AmazonS3Client(Environment.GetEnvironmentVariable("awsAccessKeyId"), Environment.GetEnvironmentVariable("awsSecretAccessKey"));
                 var fileTransferUtility = new TransferUtility(s3Client);
-                try
+                if (Environment.GetEnvironmentVariable("allowOverride") != "true")
                 {
-                    await s3Client.GetObjectMetadataAsync(new Amazon.S3.Model.GetObjectMetadataRequest() { BucketName = LINKED_ACCOUNTS, Key = data.CallerIdentity.Account });
-                    return new jsonresponse { statusCode= 304, body = data.CallerIdentity.Account };
+                    try
+                    {
+                        await s3Client.GetObjectMetadataAsync(new Amazon.S3.Model.GetObjectMetadataRequest() { BucketName = LINKED_ACCOUNTS, Key = data.CallerIdentity.Account });
+                        return new jsonresponse { statusCode = 304, body = data.CallerIdentity.Account };
+                    }
+                    catch { }
                 }
-                catch { }
 
                 using (var stream = new MemoryStream(Encoding.ASCII.GetBytes(JsonConvert.SerializeObject(data))))
                 {
